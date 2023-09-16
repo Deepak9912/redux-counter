@@ -8,8 +8,8 @@ const Counter = () => {
   const dispatch = useDispatch();
   //useSelector will receive a function which receive state managed by redux
   //and then return a part of that state that we want to extract
-  const counter = useSelector(state => state.counter);
-  const show = useSelector(state => state.showCounter);
+  const counter = useSelector(state => state.counter.counter);
+  const show = useSelector(state => state.counter.showCounter);
 
   const incrementHandler = () => {
     dispatch(counterActions.increment())
